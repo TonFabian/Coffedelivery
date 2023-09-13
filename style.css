@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  background-color: black;
+  font-family: "manrope", sans-serif;
+}
+
+body {
+  padding-top: 5rem;
+  background: url(./assets/rocket-coffee.png), url(./assets/blur-1.png),
+    url(./assets/blur-2.png);
+  background-repeat: no-repeat;
+  background-position: bottom center, bottom left, top right;
+  background-size: 60%, 60%, 40%;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+header {
+  padding-left: 137px;
+  align-items: center;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 918px;
+  margin: auto;
+}
+
+header .logo-mobile {
+  display: none;
+}
+
+header .menu-mobile {
+  display: none;
+}
+
+header ul {
+  display: flex;
+}
+
+header li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-inline: 2rem;
+}
+
+.menu a:hover {
+  opacity: 80%;
+  transition: 0.3s;
+}
+
+.get-coffee:hover {
+  background-color: #8257e5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+header .get-coffee {
+  width: 172px;
+  height: 37px;
+  border: 1px solid #8257e5;
+  background-color: transparent;
+  border-radius: 0.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: "manrope", sans-serif;
+}
+
+.coffee-text {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+.coffeer-text img {
+  max-width: 548px;
+}
+
+.text-mobile {
+  display: none;
+}
+
+.text-mobile h1 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-mobile {
+  display: none;
+}
+
+@media (max-width: 427px) {
+  .text-mobile h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  body {
+    padding-top: 3.7rem;
+    background: url(./assets/rocket-coffee.png), url(./assets/blur-mobile.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-size: 100%, 100vw 60%;
+  }
+  header {
+    padding-left: 0;
+  }
+  header .container {
+    width: 88%;
+  }
+
+  header .logo-desktop {
+    display: none;
+  }
+
+  header .logo-mobile {
+    display: flex;
+  }
+
+  header .get-coffee {
+    display: none;
+  }
+
+  header .menu-mobile {
+    display: block;
+  }
+
+  header .burger-button {
+    width: 24px;
+    height: 8px;
+    border: none;
+    margin-bottom: 0.6rem;
+    background: url(./assets/menu-burger-open.svg);
+    transition: 0.3s;
+  }
+
+  header.burger-button.close {
+    width: 18px;
+    height: 18px;
+    border: none;
+    background: url(./assets/menu-burger-close.svg);
+    transition: 0.3s;
+  }
+
+  header .menu {
+    display: block;
+    position: absolute;
+    width: 100vh;
+    height: 0px;
+    top: 9.5rem;
+    left: 0;
+    background-color: #000;
+    z-index: 999;
+    visibility: hidden;
+    transform: height 0.5s;
+    overflow-y: hidden;
+  }
+
+  .menu.open {
+    visibility: visible;
+    height: calc(100vh - 7rem);
+  }
+
+  .menu.open ul {
+    display: block;
+    border-top: 1px solid #29292e;
+  }
+
+  .menu.open li {
+    height: 5.7rem;
+    align-items: center;
+    justify-content: center;
+    padding-block: 0.7em;
+    border-bottom: 1px solid #29292e;
+  }
+
+  .menu.open a {
+    width: 100vw;
+    height: 5.7rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3.5rem;
+    font-size: 1.8rem;
+    color: #a8a8b3;
+  }
+
+  .menu.open a:focus {
+    color: #fff;
+    border-left: 5px solid #8257e5;
+    opacity: 100%;
+    padding-left: 3rem;
+  }
+
+  .coffee-text {
+    width: 100vw;
+    height: 90vh;
+    padding-top: 18%;
+    padding-bottom: 63%;
+    margin: 2.5rem auto;
+    border-top: 1px solid #29292e;
+  }
+
+  .text-mobile {
+    display: block;
+    width: 90%;
+    max-width: 800%;
+    padding-inline: 4.7 rem;
+    text-align: center;
+  }
+
+  .text-mobile h1 {
+    display: block;
+  }
+
+  .button-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 174px;
+    height: 35px;
+    border: 1px solid #8257e5;
+    background-color: transparent;
+    border-radius: 0.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 800;
+    font-family: "manrope", sans-serif;
+  }
+
+  butoon span {
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  .coffee-text img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    background-size: 50%, 60%, 40%;
+  }
+
+  header.container {
+    max-width: 1012px;
+  }
+
+  .coffee-text img {
+    width: 30%;
+    height: 30%;
+    padding: 0.75em;
+    max-width: 1012px;
+  }
+}
